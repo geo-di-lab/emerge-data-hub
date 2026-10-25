@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Dark mode follows the data-theme attribute on <html>, set by the theme toggle. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Colors drawn from the GeoDI logo. */
+@theme {
+  --color-navy: #1f3a7a;
+  --color-navy-deep: #1b2c5e;
+  --color-teal: #5a9fbf;
+  --color-steel: #3f6d8f;
+  --color-moss: #2f5a4c;
+  --color-olive: #8a8a55;
+  --color-ink: #0e1422;
+  --color-ink-raised: #161f33;
+}
+
+html {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
